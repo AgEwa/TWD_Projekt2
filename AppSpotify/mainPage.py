@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-df = pd.read_csv('karolina.csv', index_col = 0)
+df = pd.read_csv('C:/Users/karim/PycharmProjects/TWD_Projekt2/AppSpotify/karolina.csv', index_col = 0)
 df['secPlayed'] = df['msPlayed'] / 1000
 df = df[df.columns[:-1].insert(4, df.columns[-1])]
 df = df[df.secPlayed > 60]
