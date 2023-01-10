@@ -11,13 +11,17 @@ import matplotlib.colors as clr
 from matplotlib.colors import ListedColormap
 
 st.title("When and what do we listen to most often?")
-data = st.radio("Which data to display?", ["MyData", "Mg"])
+data = st.radio("Which data to display?", ["Agata", "Karolina"])
 
 #start = st.date_input("Enter the start date")
 #end = st.date_input("Enter the end date")
 
 df = pd.read_json("./" + data + "/StreamingHistory0.json")
-df1 = pd.read_json("./" + data + "/StreamingHistory1.json")
+try:
+    df1 = pd.read_json("./" + data + "/StreamingHistory1.json")
+except FileNotFoundError as e:
+    df1 = []
+
 df = df.append(df1, ignore_index=True).query("msPlayed>30000")
 df["endTime"] = pd.to_datetime(df["endTime"])
 #df = df.loc[(df['endTime']>=start) & (df['endTime']<=end)]
@@ -41,6 +45,7 @@ df1 = df[['hour', 'weekday', 'count']]
 x = pd.DataFrame(df1['weekday'].unique())
 heatmap_pt = pd.pivot_table(df1, values='count', index=['hour'], columns='weekday')
 fig, ax = plt.subplots(figsize=(16, 8))
+ax.set(ylim=(0, 24))
 sns.set(rc={'axes.facecolor':"#191414", 'figure.facecolor':"#191414"})
 mpl.rcParams.update({'text.color' : "white",
                      'axes.labelcolor' : "white",
@@ -49,6 +54,7 @@ mpl.rcParams.update({'text.color' : "white",
                      'legend.facecolor':"white",
                      'xtick.color':"white",
                      'ytick.color':"white"})
+
 #gyr = ['#28B463','#FBFF00', '#C0392B']
 #my_colors = ListedColormap(sns.color_palette(gyr))     201A1A      2CFF77
 #cmap=sns.cubehelix_palette(start=2, rot=0, dark=0, light=.95, reverse=True, as_cmap=True)
