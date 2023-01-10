@@ -13,9 +13,10 @@ for feature in features:
 fig = px.line_polar(r=df.loc[0,["danceability_mean","energy_mean","speechiness_mean","instrumentalness_mean","valence_mean"]], theta=features, line_close=True,template="plotly_dark")
 fig.update_traces(fill='toself')
 fig.update_polars(radialaxis_range=[0,1])
-fig.show()
+
 
 st.title("What music do we listen to?")
 # # st.sidebar.success("Select page above.")
 #
 st.write("top artists, top sonds, music type (?)")
+st.plotly_chart(fig)
