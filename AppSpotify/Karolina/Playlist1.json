@@ -1,0 +1,464 @@
+{
+  "playlists": [
+    {
+      "name": "Taylor Swift ",
+      "lastModifiedDate": "2018-08-27",
+      "items": [
+        {
+          "track": {
+            "trackName": "Love Story",
+            "artistName": "Taylor Swift",
+            "albumName": "This Is The Sound Of...Love",
+            "trackUri": "spotify:track:0Uc9PhfV2oP7mhXlLux6SM"
+          },
+          "episode": null,
+          "localTrack": null,
+          "addedDate": "2016-04-26"
+        },
+        {
+          "track": {
+            "trackName": "You Belong With Me",
+            "artistName": "Taylor Swift",
+            "albumName": "Let's Get It Started",
+            "trackUri": "spotify:track:0lfoTtq7sXenoEtdeGaom7"
+          },
+          "episode": null,
+          "localTrack": null,
+          "addedDate": "2016-04-26"
+        },
+        {
+          "track": {
+            "trackName": "Safe & Sound - from The Hunger Games Soundtrack",
+            "artistName": "Taylor Swift",
+            "albumName": "The Hunger Games: Songs From District 12 And Beyond",
+            "trackUri": "spotify:track:4yTqjWF2EoFJM5BbSCe4YW"
+          },
+          "episode": null,
+          "localTrack": null,
+          "addedDate": "2016-04-26"
+        },
+        {
+          "track": {
+            "trackName": "Eyes Open",
+            "artistName": "Taylor Swift",
+            "albumName": "The Hunger Games: Songs From District 12 And Beyond",
+            "trackUri": "spotify:track:6KEemo78n0RnCQWKkeOdXz"
+          },
+          "episode": null,
+          "localTrack": null,
+          "addedDate": "2016-04-26"
+        },
+        {
+          "track": {
+            "trackName": "Crazier",
+            "artistName": "Taylor Swift",
+            "albumName": "Hannah Montana The Movie",
+            "trackUri": "spotify:track:3Gfx0rvzSpxUwpaOwLSnPV"
+          },
+          "episode": null,
+          "localTrack": null,
+          "addedDate": "2016-04-26"
+        }
+      ],
+      "description": null,
+      "numberOfFollowers": 0
+    },
+    {
+      "name": "The Chainsmokers",
+      "lastModifiedDate": "2018-08-27",
+      "items": [
+        {
+          "track": {
+            "trackName": "Don't Let Me Down",
+            "artistName": "The Chainsmokers",
+            "albumName": "Don't Let Me Down",
+            "trackUri": "spotify:track:1i1fxkWeaMmKEB4T7zqbzK"
+          },
+          "episode": null,
+          "localTrack": null,
+          "addedDate": "2016-04-26"
+        },
+        {
+          "track": {
+            "trackName": "Roses",
+            "artistName": "The Chainsmokers",
+            "albumName": "Roses",
+            "trackUri": "spotify:track:3vv9phIu6Y1vX3jcqaGz5Z"
+          },
+          "episode": null,
+          "localTrack": null,
+          "addedDate": "2016-04-26"
+        },
+        {
+          "track": {
+            "trackName": "Inside Out",
+            "artistName": "The Chainsmokers",
+            "albumName": "Inside Out",
+            "trackUri": "spotify:track:7sG2bWi2eDtvX9vX8yC1Gn"
+          },
+          "episode": null,
+          "localTrack": null,
+          "addedDate": "2016-04-26"
+        },
+        {
+          "track": {
+            "trackName": "Until You Were Gone",
+            "artistName": "The Chainsmokers",
+            "albumName": "Until You Were Gone",
+            "trackUri": "spotify:track:12MqM3S0fTvR6X4Jt1Xvn6"
+          },
+          "episode": null,
+          "localTrack": null,
+          "addedDate": "2016-04-26"
+        },
+        {
+          "track": {
+            "trackName": "New York City",
+            "artistName": "The Chainsmokers",
+            "albumName": "New York City",
+            "trackUri": "spotify:track:4v1CvZazmdpxQLEt3sCeKH"
+          },
+          "episode": null,
+          "localTrack": null,
+          "addedDate": "2016-04-26"
+        }
+      ],
+      "description": null,
+      "numberOfFollowers": 0
+    },
+    {
+      "name": "Rihanna ",
+      "lastModifiedDate": "2018-08-27",
+      "items": [
+        {
+          "track": {
+            "trackName": "Work",
+            "artistName": "Rihanna",
+            "albumName": "ANTI",
+            "trackUri": "spotify:track:14WWzenpaEgQZlqPq2nk4v"
+          },
+          "episode": null,
+          "localTrack": null,
+          "addedDate": "2016-04-26"
+        },
+        {
+          "track": {
+            "trackName": "The Monster",
+            "artistName": "Eminem",
+            "albumName": "The Monster",
+            "trackUri": "spotify:track:6ilfuI7O1vUfKf4TQ9fJRb"
+          },
+          "episode": null,
+          "localTrack": null,
+          "addedDate": "2016-04-26"
+        },
+        {
+          "track": {
+            "trackName": "FourFiveSeconds",
+            "artistName": "Rihanna",
+            "albumName": "FourFiveSeconds",
+            "trackUri": "spotify:track:5XzmZjXhMjDHr7ZfJ6DELQ"
+          },
+          "episode": null,
+          "localTrack": null,
+          "addedDate": "2016-04-26"
+        },
+        {
+          "track": {
+            "trackName": "Work",
+            "artistName": "William Singe",
+            "albumName": "Work",
+            "trackUri": "spotify:track:6fs6PM9LcV3Dav4ncOPrId"
+          },
+          "episode": null,
+          "localTrack": null,
+          "addedDate": "2016-04-26"
+        }
+      ],
+      "description": null,
+      "numberOfFollowers": 0
+    },
+    {
+      "name": "Ariana Grande ",
+      "lastModifiedDate": "2018-08-27",
+      "items": [
+        {
+          "track": {
+            "trackName": "Best Mistake",
+            "artistName": "Ariana Grande",
+            "albumName": "My Everything",
+            "trackUri": "spotify:track:61707mcFfjlHcedjmRCr1L"
+          },
+          "episode": null,
+          "localTrack": null,
+          "addedDate": "2016-04-26"
+        },
+        {
+          "track": {
+            "trackName": "One Last Time",
+            "artistName": "Ariana Grande",
+            "albumName": "My Everything",
+            "trackUri": "spotify:track:2OlWBmSjf1aUPGLNf0UI5A"
+          },
+          "episode": null,
+          "localTrack": null,
+          "addedDate": "2016-04-26"
+        },
+        {
+          "track": {
+            "trackName": "Bang Bang",
+            "artistName": "Jessie J",
+            "albumName": "Sweet Talker",
+            "trackUri": "spotify:track:3SaIsrEzrQGDcG1jCeaK8q"
+          },
+          "episode": null,
+          "localTrack": null,
+          "addedDate": "2016-04-26"
+        },
+        {
+          "track": {
+            "trackName": "Be Alright",
+            "artistName": "Ariana Grande",
+            "albumName": "Be Alright",
+            "trackUri": "spotify:track:6ZllZRW9urRfEUdmtMM3lE"
+          },
+          "episode": null,
+          "localTrack": null,
+          "addedDate": "2016-04-26"
+        }
+      ],
+      "description": null,
+      "numberOfFollowers": 0
+    },
+    {
+      "name": "Hailee Steinfeld",
+      "lastModifiedDate": "2018-08-27",
+      "items": [
+        {
+          "track": {
+            "trackName": "Love Myself",
+            "artistName": "Hailee Steinfeld",
+            "albumName": "Love Myself",
+            "trackUri": "spotify:track:52izjvF7wwveRG1rDJsGWe"
+          },
+          "episode": null,
+          "localTrack": null,
+          "addedDate": "2016-04-26"
+        }
+      ],
+      "description": null,
+      "numberOfFollowers": 0
+    },
+    {
+      "name": "Shawn Mendes ",
+      "lastModifiedDate": "2018-08-27",
+      "items": [
+        {
+          "track": {
+            "trackName": "Bring It Back",
+            "artistName": "Shawn Mendes",
+            "albumName": "Handwritten",
+            "trackUri": "spotify:track:0KXQJObw7wSN3PTzp722Dp"
+          },
+          "episode": null,
+          "localTrack": null,
+          "addedDate": "2016-04-26"
+        },
+        {
+          "track": {
+            "trackName": "Bring It Back",
+            "artistName": "Shawn Mendes",
+            "albumName": "Handwritten",
+            "trackUri": "spotify:track:0KXQJObw7wSN3PTzp722Dp"
+          },
+          "episode": null,
+          "localTrack": null,
+          "addedDate": "2016-04-26"
+        },
+        {
+          "track": {
+            "trackName": "Imagination",
+            "artistName": "Shawn Mendes",
+            "albumName": "Handwritten",
+            "trackUri": "spotify:track:0CgTuGTVzwPDd8o2rWH6DE"
+          },
+          "episode": null,
+          "localTrack": null,
+          "addedDate": "2016-04-26"
+        },
+        {
+          "track": {
+            "trackName": "The Weight",
+            "artistName": "Shawn Mendes",
+            "albumName": "Handwritten",
+            "trackUri": "spotify:track:5H2nJw7XkKyc43lhccRy5R"
+          },
+          "episode": null,
+          "localTrack": null,
+          "addedDate": "2016-04-26"
+        },
+        {
+          "track": {
+            "trackName": "This Is What It Takes",
+            "artistName": "Shawn Mendes",
+            "albumName": "Handwritten",
+            "trackUri": "spotify:track:4xIZj7JRC3FnGPAjmkhNeW"
+          },
+          "episode": null,
+          "localTrack": null,
+          "addedDate": "2016-04-26"
+        },
+        {
+          "track": {
+            "trackName": "Air",
+            "artistName": "Shawn Mendes",
+            "albumName": "Handwritten",
+            "trackUri": "spotify:track:1c9LBfX0klXJscJAYDI0Ea"
+          },
+          "episode": null,
+          "localTrack": null,
+          "addedDate": "2016-04-26"
+        },
+        {
+          "track": {
+            "trackName": "Crazy",
+            "artistName": "Shawn Mendes",
+            "albumName": "Handwritten",
+            "trackUri": "spotify:track:1INC537rOIf9M1OJL8QASz"
+          },
+          "episode": null,
+          "localTrack": null,
+          "addedDate": "2016-04-26"
+        },
+        {
+          "track": {
+            "trackName": "Life Of The Party",
+            "artistName": "Shawn Mendes",
+            "albumName": "Handwritten",
+            "trackUri": "spotify:track:2ZNowcE7ehJYEkChoRjSx0"
+          },
+          "episode": null,
+          "localTrack": null,
+          "addedDate": "2016-04-26"
+        }
+      ],
+      "description": null,
+      "numberOfFollowers": 0
+    },
+    {
+      "name": "Adele",
+      "lastModifiedDate": "2018-08-27",
+      "items": [
+        {
+          "track": {
+            "trackName": "Skinny Love",
+            "artistName": "Birdy",
+            "albumName": "Birdy",
+            "trackUri": "spotify:track:4RL77hMWUq35NYnPLXBpih"
+          },
+          "episode": null,
+          "localTrack": null,
+          "addedDate": "2016-02-20"
+        }
+      ],
+      "description": null,
+      "numberOfFollowers": 0
+    },
+    {
+      "name": "Pentatonix",
+      "lastModifiedDate": "2018-08-27",
+      "items": [
+        {
+          "track": {
+            "trackName": "Sing",
+            "artistName": "Pentatonix",
+            "albumName": "Pentatonix (Deluxe Version)",
+            "trackUri": "spotify:track:4940HtUKC4VDtiC5s4t4MT"
+          },
+          "episode": null,
+          "localTrack": null,
+          "addedDate": "2016-02-20"
+        },
+        {
+          "track": {
+            "trackName": "Where Are Ü Now",
+            "artistName": "Pentatonix",
+            "albumName": "Pentatonix (Deluxe Version)",
+            "trackUri": "spotify:track:6TUV0YguQNcVe5ntktzXWu"
+          },
+          "episode": null,
+          "localTrack": null,
+          "addedDate": "2016-02-20"
+        },
+        {
+          "track": {
+            "trackName": "Cheerleader (OMI Cover)",
+            "artistName": "Pentatonix",
+            "albumName": "Pentatonix (Deluxe Version)",
+            "trackUri": "spotify:track:3DJzbnITxJVoLjtYGu4NeV"
+          },
+          "episode": null,
+          "localTrack": null,
+          "addedDate": "2016-04-26"
+        },
+        {
+          "track": {
+            "trackName": "Radioactive",
+            "artistName": "Pentatonix",
+            "albumName": "Radioactive",
+            "trackUri": "spotify:track:6vGVf8K3ri7VfkCj6PtZRy"
+          },
+          "episode": null,
+          "localTrack": null,
+          "addedDate": "2016-04-26"
+        },
+        {
+          "track": {
+            "trackName": "Can't Sleep Love",
+            "artistName": "Pentatonix",
+            "albumName": "Pentatonix (Deluxe Version)",
+            "trackUri": "spotify:track:1klGbW5a9qTBFUjFfddbmU"
+          },
+          "episode": null,
+          "localTrack": null,
+          "addedDate": "2016-04-26"
+        },
+        {
+          "track": {
+            "trackName": "Cracked",
+            "artistName": "Pentatonix",
+            "albumName": "Pentatonix (Deluxe Version)",
+            "trackUri": "spotify:track:2Jarj3mrS5Z0A9qSuJgtkP"
+          },
+          "episode": null,
+          "localTrack": null,
+          "addedDate": "2016-04-26"
+        },
+        {
+          "track": {
+            "trackName": "Water",
+            "artistName": "Pentatonix",
+            "albumName": "Pentatonix (Deluxe Version)",
+            "trackUri": "spotify:track:0AMydQFel4RVQbIN30Fjik"
+          },
+          "episode": null,
+          "localTrack": null,
+          "addedDate": "2016-04-26"
+        },
+        {
+          "track": {
+            "trackName": "Lean On",
+            "artistName": "Pentatonix",
+            "albumName": "Pentatonix (Deluxe Version)",
+            "trackUri": "spotify:track:6a5QzUZuTOi5apGZ6Nmdpx"
+          },
+          "episode": null,
+          "localTrack": null,
+          "addedDate": "2016-04-26"
+        }
+      ],
+      "description": null,
+      "numberOfFollowers": 0
+    }
+  ]
+}
