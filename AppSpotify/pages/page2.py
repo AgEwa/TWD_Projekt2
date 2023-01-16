@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import plotly.graph_objs as go
-import plotly.express as px
 
 st.title("Something with artists")
 
@@ -10,8 +9,6 @@ df2 = pd.read_json('./Agata/extended/endsong_0.json')
 
 artist_chosen = 'The Dumplings'
 
-colors = px.colors.named_colorscales("burg")
-print(colors)
 names = ["Łukasz", "Agata", "Karolina"]
 frames = [df1, df2]
 df_plot_year = None
@@ -44,7 +41,6 @@ for df in frames:
 
 # Data for Sankey diagram
 label = ['Sum of all tracks'] + df_plot_name['Name'].tolist() + df_plot_year['Year'].tolist()
-print(label)
 source = []
 target = []
 value = []
@@ -60,16 +56,17 @@ for i in range(len(df_plot_name)):
     before += year_len[i]
 value += df_plot_year['count'].tolist()
 
-node_x = [0]+[1]*len(df_plot_name)+[2]*len(df_plot_year)
-node_y = [0]+[_ for _ in range(len(df_plot_name))]+[_ for _ in range(len(df_plot_year))]
-
+# node_x = [0]+[1]*len(df_plot_name)+[2]*len(df_plot_year)
+# node_y = [0]+[_ for _ in range(len(df_plot_name))]+[_ for _ in range(len(df_plot_year))]
+#
+# print(node_x)
+# print(node_y)
 
 fig = go.Figure(data=[go.Sankey(
     node=dict(
-        label=label,
-        x = node_x,
-        y = node_y
-
+        label=label
+        # x = node_x,
+        # y = node_y
     ),
     link=dict(
         source=source,
