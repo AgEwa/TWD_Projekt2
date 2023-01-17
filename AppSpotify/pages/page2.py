@@ -2,13 +2,14 @@ import streamlit as st
 import pandas as pd
 import plotly.graph_objs as go
 
-st.title("Something with artists")
+st.title("Which artists we share the most?")
 
 df1 = pd.read_json('./Lukasz/long/endsong_0.json')
 df2 = pd.read_json('./Agata/extended/endsong_0.json')
 df3 = pd.read_json('./Karolina/endsong.json')
 
-artist_chosen = 'Adele'
+artist_chosen = st.selectbox("Choose an artist",
+             ["Adele", "The Dumplings"])
 
 names = ["Łukasz", "Agata", "Karolina"]
 frames = [df1, df2, df3]
