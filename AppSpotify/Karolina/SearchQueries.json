@@ -380,5 +380,309 @@
     "searchInteractionURIs" : [
       "spotify:track:49o4zHOWslAscdw6XL60sP"
     ]
+  },
+  {
+    "platform" : "ANDROID_ARM",
+    "searchTime" : "2022-12-24T08:17:56.128Z[UTC]",
+    "searchQuery" : "in the height",
+    "searchInteractionURIs" : [
+    ]
+  },
+  {
+    "platform" : "ANDROID",
+    "searchTime" : "2022-12-24T08:17:56.723Z[UTC]",
+    "searchQuery" : "in the heights",
+    "searchInteractionURIs" : [
+      "spotify:album:0F3HOT0E0Jj2MSnPm6tq4n"
+    ]
+  },
+  {
+    "platform" : "ANDROID_ARM",
+    "searchTime" : "2022-12-27T22:56:06.578Z[UTC]",
+    "searchQuery" : "bridger",
+    "searchInteractionURIs" : [
+    ]
+  },
+  {
+    "platform" : "ANDROID",
+    "searchTime" : "2022-12-27T22:56:10.355Z[UTC]",
+    "searchQuery" : "bridgerton ",
+    "searchInteractionURIs" : [
+      "spotify:album:7gXx19GNHIiQ3fIbXxeY1U"
+    ]
+  },
+  {
+    "platform" : "",
+    "searchTime" : "2022-12-28T18:11:45.475Z[UTC]",
+    "searchQuery" : "To Be Loved",
+    "searchInteractionURIs" : [
+    ]
+  },
+  {
+    "platform" : "",
+    "searchTime" : "2022-12-28T18:11:49.134Z[UTC]",
+    "searchQuery" : "The Docks (Lovely Ladies)",
+    "searchInteractionURIs" : [
+    ]
+  },
+  {
+    "platform" : "",
+    "searchTime" : "2022-12-28T18:11:51.999Z[UTC]",
+    "searchQuery" : "Strangers By Nature",
+    "searchInteractionURIs" : [
+    ]
+  },
+  {
+    "platform" : "",
+    "searchTime" : "2022-12-28T18:11:55.417Z[UTC]",
+    "searchQuery" : "Me",
+    "searchInteractionURIs" : [
+    ]
+  },
+  {
+    "platform" : "",
+    "searchTime" : "2022-12-28T18:12:01.503Z[UTC]",
+    "searchQuery" : "Anything You Can Do - Live",
+    "searchInteractionURIs" : [
+    ]
+  },
+  {
+    "platform" : "",
+    "searchTime" : "2022-12-28T18:12:02.813Z[UTC]",
+    "searchQuery" : "Maybe I'm Amazed",
+    "searchInteractionURIs" : [
+    ]
+  },
+  {
+    "platform" : "",
+    "searchTime" : "2022-12-28T18:12:04.933Z[UTC]",
+    "searchQuery" : "I Drink Wine",
+    "searchInteractionURIs" : [
+    ]
+  },
+  {
+    "platform" : "",
+    "searchTime" : "2022-12-28T18:12:06.141Z[UTC]",
+    "searchQuery" : "Master Of The House - Live",
+    "searchInteractionURIs" : [
+    ]
+  },
+  {
+    "platform" : "",
+    "searchTime" : "2022-12-28T18:12:08.847Z[UTC]",
+    "searchQuery" : "I Will Survive - 1981 Re-recording",
+    "searchInteractionURIs" : [
+    ]
+  },
+  {
+    "platform" : "",
+    "searchTime" : "2022-12-28T18:12:11.228Z[UTC]",
+    "searchQuery" : "The Wedding - Live",
+    "searchInteractionURIs" : [
+    ]
+  },
+  {
+    "platform" : "",
+    "searchTime" : "2022-12-28T18:12:21.935Z[UTC]",
+    "searchQuery" : "Look Down - Live",
+    "searchInteractionURIs" : [
+    ]
+  },
+  {
+    "platform" : "",
+    "searchTime" : "2022-12-28T18:12:26.825Z[UTC]",
+    "searchQuery" : "At the End of the Day - Live",
+    "searchInteractionURIs" : [
+    ]
+  },
+  {
+    "platform" : "",
+    "searchTime" : "2022-12-28T18:12:29.264Z[UTC]",
+    "searchQuery" : "Love Is A Game",
+    "searchInteractionURIs" : [
+    ]
+  },
+  {
+    "platform" : "",
+    "searchTime" : "2022-12-28T18:12:31.333Z[UTC]",
+    "searchQuery" : "Once Upon a December",
+    "searchInteractionURIs" : [
+    ]
+  },
+  {
+    "platform" : "",
+    "searchTime" : "2022-12-28T18:12:31.954Z[UTC]",
+    "searchQuery" : "I'm Here",
+    "searchInteractionURIs" : [
+    ]
+  },
+  {
+    "platform" : "",
+    "searchTime" : "2022-12-28T18:12:32.964Z[UTC]",
+    "searchQuery" : "CORALINE",
+    "searchInteractionURIs" : [
+    ]
+  },
+  {
+    "platform" : "",
+    "searchTime" : "2022-12-28T18:12:49.549Z[UTC]",
+    "searchQuery" : "Benny's Dispatch",
+    "searchInteractionURIs" : [
+    ]
+  },
+  {
+    "platform" : "",
+    "searchTime" : "2022-12-28T18:12:53.951Z[UTC]",
+    "searchQuery" : "Another One Bites The Dust - Remastered 2011",
+    "searchInteractionURIs" : [
+    ]
+  },
+  {
+    "platform" : "",
+    "searchTime" : "2022-12-28T18:12:54.455Z[UTC]",
+    "searchQuery" : "No Me Diga",
+    "searchInteractionURIs" : [
+    ]
+  },
+  {
+    "platform" : "",
+    "searchTime" : "2022-12-28T18:12:55.793Z[UTC]",
+    "searchQuery" : "Encore 1: Speeches / Do You Hear the People Sing? - Live",
+    "searchInteractionURIs" : [
+    ]
+  },
+  {
+    "platform" : "",
+    "searchTime" : "2022-12-28T18:13:10.102Z[UTC]",
+    "searchQuery" : "Revolting Children",
+    "searchInteractionURIs" : [
+    ]
+  },
+  {
+    "platform" : "",
+    "searchTime" : "2022-12-28T18:13:23.797Z[UTC]",
+    "searchQuery" : "Katarzyna Borowska: Za każdym przestępstwem stoi nieszczęście dziecka",
+    "searchInteractionURIs" : [
+    ]
+  },
+  {
+    "platform" : "ANDROID",
+    "searchTime" : "2022-12-28T22:25:31.631Z[UTC]",
+    "searchQuery" : "bridgerton ",
+    "searchInteractionURIs" : [
+    ]
+  },
+  {
+    "platform" : "ANDROID_ARM",
+    "searchTime" : "2022-12-28T22:25:43.644Z[UTC]",
+    "searchQuery" : "cover",
+    "searchInteractionURIs" : [
+    ]
+  },
+  {
+    "platform" : "ANDROID",
+    "searchTime" : "2022-12-28T22:25:47.849Z[UTC]",
+    "searchQuery" : "cover of th",
+    "searchInteractionURIs" : [
+      "spotify:track:4aXYjdLxgXUgFgQk23t8Tv"
+    ]
+  },
+  {
+    "platform" : "ANDROID_ARM",
+    "searchTime" : "2022-12-28T22:26:02.675Z[UTC]",
+    "searchQuery" : "a cover",
+    "searchInteractionURIs" : [
+    ]
+  },
+  {
+    "platform" : "ANDROID_ARM",
+    "searchTime" : "2022-12-28T22:26:02.894Z[UTC]",
+    "searchQuery" : "a cove",
+    "searchInteractionURIs" : [
+    ]
+  },
+  {
+    "platform" : "ANDROID",
+    "searchTime" : "2022-12-28T22:26:06.161Z[UTC]",
+    "searchQuery" : "a cover ids",
+    "searchInteractionURIs" : [
+    ]
+  },
+  {
+    "platform" : "ANDROID",
+    "searchTime" : "2023-01-07T01:30:23.470Z[UTC]",
+    "searchQuery" : "wjtsce",
+    "searchInteractionURIs" : [
+      "spotify:user:wojtaseek"
+    ]
+  },
+  {
+    "platform" : "ANDROID_ARM",
+    "searchTime" : "2023-01-07T01:31:13.144Z[UTC]",
+    "searchQuery" : "maszmar",
+    "searchInteractionURIs" : [
+    ]
+  },
+  {
+    "platform" : "ANDROID",
+    "searchTime" : "2023-01-07T01:31:14.949Z[UTC]",
+    "searchQuery" : "maszmario",
+    "searchInteractionURIs" : [
+      "spotify:user:maszmario"
+    ]
+  },
+  {
+    "platform" : "ANDROID",
+    "searchTime" : "2023-01-07T01:33:36.336Z[UTC]",
+    "searchQuery" : "tay",
+    "searchInteractionURIs" : [
+      "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+    ]
+  },
+  {
+    "platform" : "ANDROID",
+    "searchTime" : "2023-01-07T01:35:28.910Z[UTC]",
+    "searchQuery" : "tymciu",
+    "searchInteractionURIs" : [
+      "spotify:user:ifc2ksn93xf7qnqipegskh8dg"
+    ]
+  },
+  {
+    "platform" : "ANDROID_ARM",
+    "searchTime" : "2023-01-07T01:35:48.422Z[UTC]",
+    "searchQuery" : "łukaszlepia",
+    "searchInteractionURIs" : [
+    ]
+  },
+  {
+    "platform" : "ANDROID",
+    "searchTime" : "2023-01-07T01:35:49.710Z[UTC]",
+    "searchQuery" : "łukaszlepianka",
+    "searchInteractionURIs" : [
+    ]
+  },
+  {
+    "platform" : "ANDROID",
+    "searchTime" : "2023-01-07T01:36:43.996Z[UTC]",
+    "searchQuery" : "Łukasz Lepianka",
+    "searchInteractionURIs" : [
+      "spotify:user:lukis308"
+    ]
+  },
+  {
+    "platform" : "ANDROID_ARM",
+    "searchTime" : "2023-01-07T13:20:16.231Z[UTC]",
+    "searchQuery" : "only lov",
+    "searchInteractionURIs" : [
+    ]
+  },
+  {
+    "platform" : "ANDROID",
+    "searchTime" : "2023-01-07T13:20:18.205Z[UTC]",
+    "searchQuery" : "only lovers",
+    "searchInteractionURIs" : [
+      "spotify:album:4zPFzm54WOUGwZUE3X5BVE",
+      "spotify:album:4zPFzm54WOUGwZUE3X5BVE"
+    ]
   }
 ]

@@ -1,256 +1,28 @@
 {
   "tracks": [
     {
-      "artist": "Pentatonix",
-      "album": "Pentatonix (Deluxe Version)",
-      "track": "If I Ever Fall In Love (feat. Jason Derulo)",
-      "uri": "spotify:track:3vaWsG3oKZt0bSra2p5c5R"
+      "artist": "Corey Hawkins",
+      "album": "In The Heights (Original Motion Picture Soundtrack)",
+      "track": "96,000",
+      "uri": "spotify:track:0CpE5SeQkHQPYiWX0psxf4"
     },
     {
-      "artist": "Pentatonix",
-      "album": "Pentatonix (Deluxe Version)",
-      "track": "Sing",
-      "uri": "spotify:track:4940HtUKC4VDtiC5s4t4MT"
+      "artist": "Barlow & Bear",
+      "album": "The Unofficial Bridgerton Musical",
+      "track": "If I Were a Man",
+      "uri": "spotify:track:7dsxoeycurkfJpmV0Le5Oi"
     },
     {
-      "artist": "Pentatonix",
-      "album": "Pentatonix (Deluxe Version)",
-      "track": "Ref",
-      "uri": "spotify:track:6hWHiqL9pFnfgbSAxxnfwm"
+      "artist": "Barlow & Bear",
+      "album": "The Unofficial Bridgerton Musical",
+      "track": "Entertain Me",
+      "uri": "spotify:track:6ruGS1VRpLKnChXlLmwigZ"
     },
     {
-      "artist": "Shawn Mendes",
-      "album": "Handwritten",
-      "track": "Something Big",
-      "uri": "spotify:track:59uAvq0IeWRGkCJAki11ve"
-    },
-    {
-      "artist": "Pentatonix",
-      "album": "That's Christmas To Me (Deluxe Edition)",
-      "track": "Sleigh Ride",
-      "uri": "spotify:track:0ErjxyZ4qHQVs5umCBIClk"
-    },
-    {
-      "artist": "Pentatonix",
-      "album": "That's Christmas To Me (Deluxe Edition)",
-      "track": "Winter Wonderland / Don't Worry Be Happy (feat. Tori Kelly)",
-      "uri": "spotify:track:2kPpxNSgXRvu5yqkRLKJIu"
-    },
-    {
-      "artist": "Pentatonix",
-      "album": "Pentatonix (Deluxe Version)",
-      "track": "New Year's Day",
-      "uri": "spotify:track:4eSbzAw4DZ3tmO4eiVgnQF"
-    },
-    {
-      "artist": "Pentatonix",
-      "album": "Pentatonix (Deluxe Version)",
-      "track": "Light In The Hallway",
-      "uri": "spotify:track:0NoKGLAnGN25F1QvHpazti"
-    },
-    {
-      "artist": "Pentatonix",
-      "album": "Pentatonix (Deluxe Version)",
-      "track": "Take Me Home",
-      "uri": "spotify:track:3g2t97wd9F3E5OXaer4AuO"
-    },
-    {
-      "artist": "Pentatonix",
-      "album": "That's Christmas To Me (Deluxe Edition)",
-      "track": "That's Christmas to Me",
-      "uri": "spotify:track:2U9kDk5mlHYunC7PvbZ8KX"
-    },
-    {
-      "artist": "Pentatonix",
-      "album": "That's Christmas To Me (Deluxe Edition)",
-      "track": "Santa Claus is Coming to Town",
-      "uri": "spotify:track:4CjzPBRBwyP0kgR1gjaDjo"
-    },
-    {
-      "artist": "Pentatonix",
-      "album": "Pentatonix (Deluxe Version)",
-      "track": "Rose Gold",
-      "uri": "spotify:track:3sMsk0ZIBHEpLxPkCeoQWq"
-    },
-    {
-      "artist": "Shawn Mendes",
-      "album": "Handwritten",
-      "track": "I Don't Even Know Your Name",
-      "uri": "spotify:track:2oOssCqBMGu1bXSFF8DQyf"
-    },
-    {
-      "artist": "Shawn Mendes",
-      "album": "Handwritten",
-      "track": "Imagination",
-      "uri": "spotify:track:0CgTuGTVzwPDd8o2rWH6DE"
-    },
-    {
-      "artist": "Pentatonix",
-      "album": "That's Christmas To Me (Deluxe Edition)",
-      "track": "White Winter Hymnal (Fleet Foxes Cover)",
-      "uri": "spotify:track:0qEFmBL2k8pb2OWgW490X8"
-    },
-    {
-      "artist": "Pentatonix",
-      "album": "That's Christmas To Me (Deluxe Edition)",
-      "track": "Dance of the Sugar Plum Fairy",
-      "uri": "spotify:track:0u0TlASkQWH2bGIZRu0HLh"
-    },
-    {
-      "artist": "Pentatonix",
-      "album": "That's Christmas To Me (Deluxe Edition)",
-      "track": "Mary, Did You Know?",
-      "uri": "spotify:track:4z8sz6E4YyFuEkv5o7IJni"
-    },
-    {
-      "artist": "Pentatonix",
-      "album": "That's Christmas To Me (Deluxe Edition)",
-      "track": "Let It Go",
-      "uri": "spotify:track:2G7K3Op9y3HhqrF2TdHP95"
-    },
-    {
-      "artist": "Pentatonix",
-      "album": "Pentatonix (Deluxe Version)",
-      "track": "Water",
-      "uri": "spotify:track:0AMydQFel4RVQbIN30Fjik"
-    },
-    {
-      "artist": "Pentatonix",
-      "album": "That's Christmas To Me (Deluxe Edition)",
-      "track": "Joy to the World",
-      "uri": "spotify:track:28vlppNXOSeMYi6Mwou6qs"
-    },
-    {
-      "artist": "Pentatonix",
-      "album": "That's Christmas To Me (Deluxe Edition)",
-      "track": "Have Yourself a Merry Little Christmas",
-      "uri": "spotify:track:0D7DRqVU5h31xtEUccV4s7"
-    },
-    {
-      "artist": "Pentatonix",
-      "album": "Pentatonix (Deluxe Version)",
-      "track": "Can't Sleep Love",
-      "uri": "spotify:track:1klGbW5a9qTBFUjFfddbmU"
-    },
-    {
-      "artist": "Shawn Mendes",
-      "album": "Handwritten",
-      "track": "This Is What It Takes",
-      "uri": "spotify:track:4xIZj7JRC3FnGPAjmkhNeW"
-    },
-    {
-      "artist": "Shawn Mendes",
-      "album": "Handwritten",
-      "track": "Crazy",
-      "uri": "spotify:track:1INC537rOIf9M1OJL8QASz"
-    },
-    {
-      "artist": "Pentatonix",
-      "album": "That's Christmas To Me (Deluxe Edition)",
-      "track": "It's the Most Wonderful Time of the Year",
-      "uri": "spotify:track:4DXJt41B9ZPh3UmxiPkBT0"
-    },
-    {
-      "artist": "Shawn Mendes",
-      "album": "Stitches",
-      "track": "Stitches - Seeb Remix",
-      "uri": "spotify:track:3ExRMV5iR7VGGQOCljcCYE"
-    },
-    {
-      "artist": "Pentatonix",
-      "album": "Pentatonix (Deluxe Version)",
-      "track": "Na Na Na",
-      "uri": "spotify:track:6v08G3CGcoyiODIWZoOxR4"
-    },
-    {
-      "artist": "Shawn Mendes",
-      "album": "Handwritten",
-      "track": "Stitches",
-      "uri": "spotify:track:1WP1r7fuvRqZRnUaTi2I1Q"
-    },
-    {
-      "artist": "Shawn Mendes",
-      "album": "Handwritten",
-      "track": "Life Of The Party",
-      "uri": "spotify:track:2ZNowcE7ehJYEkChoRjSx0"
-    },
-    {
-      "artist": "Pentatonix",
-      "album": "That's Christmas To Me (Deluxe Edition)",
-      "track": "Hark! The Herald Angels Sing",
-      "uri": "spotify:track:7DG0w4DhCctrvlXIai22yg"
-    },
-    {
-      "artist": "Shawn Mendes",
-      "album": "Handwritten",
-      "track": "Kid In Love",
-      "uri": "spotify:track:1DSB8em9HN8HO9frWdh7qd"
-    },
-    {
-      "artist": "Pentatonix",
-      "album": "That's Christmas To Me (Deluxe Edition)",
-      "track": "Silent Night",
-      "uri": "spotify:track:75lWQzF7y0FY9380G3gEZ9"
-    },
-    {
-      "artist": "Shawn Mendes",
-      "album": "Handwritten",
-      "track": "The Weight",
-      "uri": "spotify:track:5H2nJw7XkKyc43lhccRy5R"
-    },
-    {
-      "artist": "Shawn Mendes",
-      "album": "Handwritten",
-      "track": "Air",
-      "uri": "spotify:track:1c9LBfX0klXJscJAYDI0Ea"
-    },
-    {
-      "artist": "Pentatonix",
-      "album": "Pentatonix (Deluxe Version)",
-      "track": "Cheerleader (OMI Cover)",
-      "uri": "spotify:track:3DJzbnITxJVoLjtYGu4NeV"
-    },
-    {
-      "artist": "Shawn Mendes",
-      "album": "Handwritten",
-      "track": "A Little Too Much",
-      "uri": "spotify:track:06DaCxeg3IUMcxDkKEyQKf"
-    },
-    {
-      "artist": "Shawn Mendes",
-      "album": "Handwritten",
-      "track": "Aftertaste",
-      "uri": "spotify:track:0ZoWOsQXlkb8cyIH7XnepI"
-    },
-    {
-      "artist": "Shawn Mendes",
-      "album": "Handwritten",
-      "track": "Strings",
-      "uri": "spotify:track:1oHqFz69YYuc7ay3ke4aSO"
-    },
-    {
-      "artist": "Shawn Mendes",
-      "album": "Handwritten (Revisited)",
-      "track": "I Know What You Did Last Summer",
-      "uri": "spotify:track:7crplFzt7spG80NCbpmuCp"
-    },
-    {
-      "artist": "Pentatonix",
-      "album": "Pentatonix (Deluxe Version)",
-      "track": "Cracked",
-      "uri": "spotify:track:2Jarj3mrS5Z0A9qSuJgtkP"
-    },
-    {
-      "artist": "Pentatonix",
-      "album": "Pentatonix (Deluxe Version)",
-      "track": "Lean On",
-      "uri": "spotify:track:6a5QzUZuTOi5apGZ6Nmdpx"
-    },
-    {
-      "artist": "Pentatonix",
-      "album": "Pentatonix (Deluxe Version)",
-      "track": "Where Are Ü Now",
-      "uri": "spotify:track:6TUV0YguQNcVe5ntktzXWu"
+      "artist": "Leslie Grace",
+      "album": "In The Heights (Original Motion Picture Soundtrack)",
+      "track": "Breathe (feat. Rubén Blades and Doreen Montalvo)",
+      "uri": "spotify:track:6eHA7Fw7JcrmhY5SZK9Rzx"
     },
     {
       "artist": "Adele",
@@ -259,74 +31,39 @@
       "uri": "spotify:track:0ENSn4fwAbCGeFGVUbXEU3"
     },
     {
-      "artist": "Pentatonix",
-      "album": "That's Christmas To Me (Deluxe Edition)",
-      "track": "Just For Now",
-      "uri": "spotify:track:3hseCZajM8zUvHfyNpGGFO"
+      "artist": "Barlow & Bear",
+      "album": "The Unofficial Bridgerton Musical",
+      "track": "Burn for You",
+      "uri": "spotify:track:6lmke3XxJTBC2x2tT6gMo7"
     },
     {
-      "artist": "Pentatonix",
-      "album": "Pentatonix (Deluxe Version)",
-      "track": "Can't Sleep Love (feat. Tink)",
-      "uri": "spotify:track:1GXFYdKM6MNrogE2PacpKe"
+      "artist": "Lin-Manuel Miranda",
+      "album": "In The Heights (Original Motion Picture Soundtrack)",
+      "track": "In The Heights",
+      "uri": "spotify:track:7oMr1IBlYwnb1jZh6of8kN"
     },
     {
-      "artist": "Pentatonix",
-      "album": "Pentatonix (Deluxe Version)",
-      "track": "First Things First",
-      "uri": "spotify:track:6sIqfpYT76jKQuDvBpzEKw"
-    },
-    {
-      "artist": "Pentatonix",
-      "album": "That's Christmas To Me (Deluxe Edition)",
-      "track": "The First Noel",
-      "uri": "spotify:track:2HQerWGTwJfTtOlJ3OA2Yn"
-    },
-    {
-      "artist": "Shawn Mendes",
-      "album": "Handwritten",
-      "track": "Never Be Alone",
-      "uri": "spotify:track:6wQSrFnJYm3evLsavFeCVT"
-    },
-    {
-      "artist": "Shawn Mendes",
-      "album": "Handwritten",
-      "track": "Bring It Back",
-      "uri": "spotify:track:0KXQJObw7wSN3PTzp722Dp"
-    },
-    {
-      "artist": "Pentatonix",
-      "album": "Pentatonix (Deluxe Version)",
-      "track": "Misbehavin'",
-      "uri": "spotify:track:6GtFfnl204TH4ztReNW7Hn"
-    },
-    {
-      "artist": "Pentatonix",
-      "album": "That's Christmas To Me (Deluxe Edition)",
-      "track": "Mary, Did You Know? (feat. The String Mob)",
-      "uri": "spotify:track:19NDm5qNnTEOg4m8SZLF6I"
+      "artist": "Daphne Rubin-Vega",
+      "album": "In The Heights (Original Motion Picture Soundtrack)",
+      "track": "Carnaval Del Barrio",
+      "uri": "spotify:track:7D0Ntx3LMFMPNtSViJLS4D"
     }
   ],
   "albums": [
     {
-      "artist": "Claude-Michel Schönberg",
-      "album": "Les Misérables (10th Anniversary Concert Live at Royal Albert Hall)",
-      "uri": "spotify:album:1o31VAqq2nAW0uGAGLs5YD"
+      "artist": "Pentatonix",
+      "album": "That's Christmas To Me (Deluxe Edition)",
+      "uri": "spotify:album:082VlX7cBth0o8xqDGclNn"
+    },
+    {
+      "artist": "Barlow & Bear",
+      "album": "The Unofficial Bridgerton Musical",
+      "uri": "spotify:album:7gXx19GNHIiQ3fIbXxeY1U"
     },
     {
       "artist": "Lin-Manuel Miranda",
       "album": "In The Heights (Original Motion Picture Soundtrack)",
       "uri": "spotify:album:0F3HOT0E0Jj2MSnPm6tq4n"
-    },
-    {
-      "artist": "Lin-Manuel Miranda",
-      "album": "Hamilton",
-      "uri": "spotify:album:1kCHru7uhxBUdzkm4gzRQc"
-    },
-    {
-      "artist": "Shawn Mendes",
-      "album": "Handwritten",
-      "uri": "spotify:album:5wKylB0Zwnxz046O7po25D"
     },
     {
       "artist": "Pentatonix",
@@ -339,9 +76,19 @@
       "uri": "spotify:album:5jTDaLFNQovRyjNcWe4cZh"
     },
     {
-      "artist": "Pentatonix",
-      "album": "That's Christmas To Me (Deluxe Edition)",
-      "uri": "spotify:album:082VlX7cBth0o8xqDGclNn"
+      "artist": "Claude-Michel Schönberg",
+      "album": "Les Misérables (10th Anniversary Concert Live at Royal Albert Hall)",
+      "uri": "spotify:album:1o31VAqq2nAW0uGAGLs5YD"
+    },
+    {
+      "artist": "Shawn Mendes",
+      "album": "Handwritten",
+      "uri": "spotify:album:5wKylB0Zwnxz046O7po25D"
+    },
+    {
+      "artist": "Lin-Manuel Miranda",
+      "album": "Hamilton",
+      "uri": "spotify:album:1kCHru7uhxBUdzkm4gzRQc"
     }
   ],
   "shows": [
@@ -358,6 +105,10 @@
     {
       "name": "Pentatonix",
       "uri": "spotify:artist:26AHtbjWKiwYzsoGoUZq53"
+    },
+    {
+      "name": "Taylor Swift",
+      "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
     }
   ],
   "bannedArtists": [
