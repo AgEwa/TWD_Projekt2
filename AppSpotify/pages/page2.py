@@ -2,22 +2,24 @@ import streamlit as st
 import pandas as pd
 import plotly.graph_objs as go
 
-st.title("Something with artists")
+st.title("Which artists we share the most?")
 
 df1 = pd.read_json('./Lukasz/long/endsong_0.json')
 df2 = pd.read_json('./Agata/extended/endsong_0.json')
+df3 = pd.read_json('./Karolina/endsong.json')
 
-artist_chosen = 'The Dumplings'
+artist_chosen = st.selectbox("Choose an artist",
+             ["Adele", "The Dumplings"])
 
 names = ["Łukasz", "Agata", "Karolina"]
-frames = [df1, df2]
+frames = [df1, df2, df3]
 df_plot_year = None
 df_plot_name = None
 all_of_artist = 0
 year_len = []
 i = 0
 for df in frames:
-    # Filtering for chosen artis by year
+    # Filtering for chosen artist by year
     df_filter_by_artist = df.loc[
         df.master_metadata_album_artist_name == artist_chosen].reset_index(drop=True)
     df_filter_by_artist['Year'] = pd.to_datetime(df_filter_by_artist["ts"]).dt.strftime('%Y')
