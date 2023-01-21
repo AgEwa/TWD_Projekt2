@@ -65,13 +65,13 @@ df1=df1.reset_index(drop = True)
 df2=df1.groupby("artistName").size().reset_index().rename(columns={0: 'Count'}).sort_values("Count", ascending=False).reset_index(drop = True).head(3)
 df2.index = df2.index + 1
 
-fig = px.line_polar(r=df1.loc[0,["danceability_mean","energy_mean","speechiness_mean","instrumentalness_mean","valence_mean"]], theta=features, line_close=True,color_discrete_sequence =['green']*3)
+fig = px.line_polar(r=df1.loc[0,["danceability_mean","energy_mean","speechiness_mean","instrumentalness_mean","valence_mean"]], theta=features, line_close=True,color_discrete_sequence =['black']*3)
 
 # wstawić kolor
 # fig.update_layout(activeshape_fillcolor= 'green')
 
-fig.update_traces(fill='toself',marker_color='green')
-fig.update_layout(polar_bgcolor= 'black')
+fig.update_traces(fill='toself',marker_color='black')
+fig.update_layout(polar_bgcolor= 'green')
 fig.update_polars(radialaxis_range=[0,1])
 
 # df2.style.set_properties(**{'background-color': 'black',
@@ -106,10 +106,10 @@ for feature in features:
 dfLukasz1=dfLukasz1.reset_index(drop = True)
 dfLukasz2=dfLukasz1.groupby("artistName").size().reset_index().rename(columns={0: 'Count'}).sort_values("Count", ascending=False).reset_index(drop = True).head(3)
 dfLukasz2.index = dfLukasz2.index + 1
-figLukasz = px.line_polar(r=dfLukasz1.loc[0,["danceability_mean","energy_mean","speechiness_mean","instrumentalness_mean","valence_mean"]], theta=features, line_close=True,color_discrete_sequence =['green']*3)
+figLukasz = px.line_polar(r=dfLukasz1.loc[0,["danceability_mean","energy_mean","speechiness_mean","instrumentalness_mean","valence_mean"]], theta=features, line_close=True,color_discrete_sequence =['black']*3)
 
 # wstawić kolor
-figLukasz.update_layout(polar_bgcolor= 'black')
+figLukasz.update_layout(polar_bgcolor= 'green')
 figLukasz.update_traces(fill='toself')
 figLukasz.update_polars(radialaxis_range=[0,1])
 
@@ -141,10 +141,10 @@ dfAgata1=dfAgata1.reset_index(drop = True)
 dfAgata2=dfAgata1.groupby("artistName").size().reset_index().rename(columns={0: 'Count'}).sort_values("Count", ascending=False).reset_index(drop = True).head(3)
 dfAgata2.index = dfAgata2.index + 1
 
-figAgata = px.line_polar(r=dfAgata1.loc[0,["danceability_mean","energy_mean","speechiness_mean","instrumentalness_mean","valence_mean"]], theta=features, line_close=True,color_discrete_sequence =['green']*3)
+figAgata = px.line_polar(r=dfAgata1.loc[0,["danceability_mean","energy_mean","speechiness_mean","instrumentalness_mean","valence_mean"]], theta=features, line_close=True,color_discrete_sequence =['black']*3)
 
 # wstawić kolor
-figAgata.update_layout(polar_bgcolor= 'black')
+figAgata.update_layout(polar_bgcolor= 'green')
 figAgata.update_traces(fill='toself')
 figAgata.update_polars(radialaxis_range=[0,1])
 
