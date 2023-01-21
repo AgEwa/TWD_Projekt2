@@ -23,17 +23,13 @@ with st.sidebar:
 
 st.title("How much do we share listening to our favourite artists??")
 files = os.listdir('./Lukasz/long')
-print(files)
 df1 = pd.DataFrame()
 for file in files:
-    print('./Lukasz/long/'+file)
     temp = pd.read_json('./Lukasz/long/'+file)
     df1 = pd.concat([df1, temp])
 files = os.listdir('./Agata/extended')
-print(files)
 df2 = pd.DataFrame()
 for file in files:
-    print('./Agata/extended/' + file)
     temp = pd.read_json('./Agata/extended/' + file)
     df2 = pd.concat([df2, temp])
 df3 = pd.read_json('./Karolina/endsong.json')
