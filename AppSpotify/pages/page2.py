@@ -3,6 +3,7 @@ import pandas as pd
 import plotly.graph_objs as go
 import plotly.express as px
 from streamlit_extras.app_logo import add_logo
+import os
 
 #st.set_page_config(layout="wide")
 
@@ -21,9 +22,16 @@ with st.sidebar:
 
 
 st.title("How much do we share listening to our favourite artists??")
-
-df1 = pd.read_json('./Lukasz/long/endsong_0.json')
-df2 = pd.read_json('./Agata/extended/endsong_0.json')
+files = os.listdir('./Lukasz/long')
+df1 = pd.DataFrame()
+for file in files:
+    temp = pd.read_json('./Lukasz/long/'+file)
+    df1 = pd.concat([df1, temp])
+files = os.listdir('./Agata/extended')
+df2 = pd.DataFrame()
+for file in files:
+    temp = pd.read_json('./Agata/extended/' + file)
+    df2 = pd.concat([df2, temp])
 df3 = pd.read_json('./Karolina/endsong.json')
 
 
