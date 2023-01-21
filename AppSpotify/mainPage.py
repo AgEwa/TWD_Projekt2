@@ -1,7 +1,39 @@
 import streamlit as st
+from PIL import Image
 import pandas as pd
 import numpy as np
 import plotly.express as px
+from streamlit_extras.app_logo import add_logo
+
+#st.set_page_config(layout="wide")
+
+
+add_logo("./spotify.png", height=300)
+#st.write("👈 Check out the cat in the nav-bar!")
+
+page_bg_img = """
+<style>
+[data-testid="stSidebar"]{
+    background-color: #1db954;
+    
+}
+</style>
+"""
+
+black_font = """
+<style>
+[data-testid="stSidebar"]{
+    color: #000000;
+    
+}
+</style>
+"""
+
+#st.sidebar.image(Image.open("./spotify.png"),use_column_width=True)
+with st.sidebar:
+    st.markdown(page_bg_img,unsafe_allow_html=True)
+    st.markdown(black_font, unsafe_allow_html=True)
+
 
 # C:/Users/karim/PycharmProjects/TWD_Projekt2/AppSpotify/karolina.csv
 df = pd.read_csv("karolina.csv", index_col = 0)
