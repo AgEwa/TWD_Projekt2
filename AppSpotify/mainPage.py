@@ -71,7 +71,7 @@ fig = px.line_polar(r=df1.loc[0,["danceability_mean","energy_mean","speechiness_
 # fig.update_layout(activeshape_fillcolor= 'green')
 
 fig.update_traces(fill='toself',marker_color='black')
-fig.update_layout(polar_bgcolor= 'green')
+fig.update_layout(polar_bgcolor= '#1db954')
 fig.update_polars(radialaxis_range=[0,1])
 
 # df2.style.set_properties(**{'background-color': 'black',
@@ -109,7 +109,7 @@ dfLukasz2.index = dfLukasz2.index + 1
 figLukasz = px.line_polar(r=dfLukasz1.loc[0,["danceability_mean","energy_mean","speechiness_mean","instrumentalness_mean","valence_mean"]], theta=features, line_close=True,color_discrete_sequence =['black']*3)
 
 # wstawić kolor
-figLukasz.update_layout(polar_bgcolor= 'green')
+figLukasz.update_layout(polar_bgcolor= '#1db954')
 figLukasz.update_traces(fill='toself')
 figLukasz.update_polars(radialaxis_range=[0,1])
 
@@ -144,7 +144,7 @@ dfAgata2.index = dfAgata2.index + 1
 figAgata = px.line_polar(r=dfAgata1.loc[0,["danceability_mean","energy_mean","speechiness_mean","instrumentalness_mean","valence_mean"]], theta=features, line_close=True,color_discrete_sequence =['black']*3)
 
 # wstawić kolor
-figAgata.update_layout(polar_bgcolor= 'green')
+figAgata.update_layout(polar_bgcolor= '#1db954')
 figAgata.update_traces(fill='toself')
 figAgata.update_polars(radialaxis_range=[0,1])
 
