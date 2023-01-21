@@ -2,8 +2,25 @@ import streamlit as st
 import pandas as pd
 import plotly.graph_objs as go
 import plotly.express as px
+from streamlit_extras.app_logo import add_logo
 
-st.title("How much do we share listening to our favourite artists?")
+#st.set_page_config(layout="wide")
+
+add_logo("./spotify.png", height=300)
+
+page_bg_img = """
+<style>
+[data-testid="stSidebar"]{
+    background-color: #1db954
+}
+</style>
+"""
+
+with st.sidebar:
+    st.markdown(page_bg_img,unsafe_allow_html=True)
+
+
+st.title("How much do we share listening to our favourite artists??")
 
 df1 = pd.read_json('./Lukasz/long/endsong_0.json')
 df2 = pd.read_json('./Agata/extended/endsong_0.json')
