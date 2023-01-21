@@ -70,6 +70,7 @@ if karolina:
     colors += ["#10642d"]
     node_colors += ["#0d5024"]
 
+# If dataframes are chosen
 if frames:
     df_plot_year = None
     df_plot_name = None
@@ -126,12 +127,6 @@ if frames:
             chosen_year += year_len[i]
         value += df_plot_year['count'].tolist()
 
-        # node_x = [0]+[1]*len(df_plot_name)+[2]*len(df_plot_year)
-        # node_y = [0]+[_ for _ in range(len(df_plot_name))]+[_ for _ in range(len(df_plot_year))]
-        #
-        # print(node_x)
-        # print(node_y)
-
         fig = go.Figure(data=[go.Sankey(
             node=dict(
                 label=label,
@@ -147,7 +142,6 @@ if frames:
                 color = color
             )
         )])
-        #color = "#1db954"
         fig.update_layout(title_text=" Sankey plot for chosen artist ", font_size=18)
 
         st.plotly_chart(fig)
