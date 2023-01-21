@@ -34,7 +34,7 @@ with st.sidebar:
 
 
 # C:/Users/karim/PycharmProjects/TWD_Projekt2/AppSpotify/karolina.csv
-df = pd.read_csv("karolina.csv", index_col = 0)
+df = pd.read_csv("./karolina.csv", index_col = 0)
 df['secPlayed'] = df['msPlayed'] / 1000
 df = df[df.columns[:-1].insert(4, df.columns[-1])]
 df = df[df.secPlayed > 60]
@@ -64,19 +64,25 @@ for feature in features:
 df1=df1.reset_index(drop = True)
 df2=df1.groupby("artistName").size().reset_index().rename(columns={0: 'Count'}).sort_values("Count", ascending=False).reset_index(drop = True).head(3)
 
-fig = px.line_polar(r=df1.loc[0,["danceability_mean","energy_mean","speechiness_mean","instrumentalness_mean","valence_mean"]], theta=features, line_close=True)
+fig = px.line_polar(r=df1.loc[0,["danceability_mean","energy_mean","speechiness_mean","instrumentalness_mean","valence_mean"]], theta=features, line_close=True,color_discrete_sequence =['green']*3)
 
 # wstawić kolor
-fig.update_layout(polar_bgcolor= 'white')
-fig.update_traces(fill='toself')
+# fig.update_layout(activeshape_fillcolor= 'green')
+
+fig.update_traces(fill='toself',marker_color='green')
+fig.update_layout(polar_bgcolor= 'black')
 fig.update_polars(radialaxis_range=[0,1])
+
+# df2.style.set_properties(**{'background-color': 'black',
+#                            'color': 'green'})
 
 with st.container():
     col1, col2 = st.columns(2)
     with col1:
-        st.title('First incredible anonymous person ')
-        st.write("Top artists")
-        st.table(df2["artistName"])
+        st.title('Karolina ')
+        st.write("During selected hours Karolina was listening to those artists the most:")
+        st.dataframe(df2["artistName"])
+
     with col2:
         st.plotly_chart(fig, height=100)
 
@@ -99,24 +105,24 @@ for feature in features:
 dfLukasz1=dfLukasz1.reset_index(drop = True)
 dfLukasz2=dfLukasz1.groupby("artistName").size().reset_index().rename(columns={0: 'Count'}).sort_values("Count", ascending=False).reset_index(drop = True).head(3)
 
-figLukasz = px.line_polar(r=dfLukasz1.loc[0,["danceability_mean","energy_mean","speechiness_mean","instrumentalness_mean","valence_mean"]], theta=features, line_close=True)
+figLukasz = px.line_polar(r=dfLukasz1.loc[0,["danceability_mean","energy_mean","speechiness_mean","instrumentalness_mean","valence_mean"]], theta=features, line_close=True,color_discrete_sequence =['green']*3)
 
 # wstawić kolor
-figLukasz.update_layout(polar_bgcolor= 'white')
+figLukasz.update_layout(polar_bgcolor= 'black')
 figLukasz.update_traces(fill='toself')
 figLukasz.update_polars(radialaxis_range=[0,1])
 
 with st.container():
     col1, col2 = st.columns(2)
     with col1:
-        st.title('Second incredible anonymous person ')
-        st.write("Top artists")
+        st.title('Łukasz')
+        st.write("During selected hours Łukasz was listening to those artists the most:")
         st.table(dfLukasz2["artistName"])
     with col2:
         st.plotly_chart(figLukasz,height=100)
 
 hoursA = st.slider('Choose time range for the third person', 0, 24, (8,16))
-dfAgata=pd.read_csv('./Lukasz/final.csv', index_col = 0)
+dfAgata=pd.read_csv('./Agata.csv', index_col = 0)
 dfAgata['secPlayed'] = dfAgata['msPlayed'] / 1000
 dfAgata = dfAgata[dfAgata.columns[:-1].insert(4, dfAgata.columns[-1])]
 dfAgata = dfAgata[dfAgata.secPlayed > 60]
@@ -133,18 +139,18 @@ for feature in features:
 dfAgata1=dfAgata1.reset_index(drop = True)
 dfAgata2=dfAgata1.groupby("artistName").size().reset_index().rename(columns={0: 'Count'}).sort_values("Count", ascending=False).reset_index(drop = True).head(3)
 
-figAgata = px.line_polar(r=dfAgata1.loc[0,["danceability_mean","energy_mean","speechiness_mean","instrumentalness_mean","valence_mean"]], theta=features, line_close=True)
+figAgata = px.line_polar(r=dfAgata1.loc[0,["danceability_mean","energy_mean","speechiness_mean","instrumentalness_mean","valence_mean"]], theta=features, line_close=True,color_discrete_sequence =['green']*3)
 
 # wstawić kolor
-figAgata.update_layout(polar_bgcolor= 'white')
+figAgata.update_layout(polar_bgcolor= 'black')
 figAgata.update_traces(fill='toself')
 figAgata.update_polars(radialaxis_range=[0,1])
 
 with st.container():
     col1, col2 = st.columns(2)
     with col1:
-        st.title('Third incredible anonymous person ')
-        st.write("Top artists")
+        st.title('Agata')
+        st.write("During selected hours Agata was listening to those artists the most:")
         st.table(dfAgata2["artistName"])
 
     with col2:
