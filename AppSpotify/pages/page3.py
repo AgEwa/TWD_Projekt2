@@ -31,7 +31,8 @@ with st.sidebar:
 
 #with col2:
 st.title("When and what do we listen to most often?")
-data = st.radio("Which data to display?", ["Agata", "Karolina","Łukasz"])
+st.write("Who has had a few sleepless nights spent listening to music? What songs did we listen to the most?")
+data = st.radio("Which person's data to display?", ["Agata", "Karolina","Łukasz"])
 
 if data == "Agata":
     df = pd.read_json("./Agata/StreamingHistory0.json")
@@ -39,7 +40,7 @@ if data == "Agata":
     df = df.append(df1, ignore_index=True).query("msPlayed>30000")
 
 if data == "Karolina":
-    df = pd.read_json("./Agata/StreamingHistory0.json")
+    df = pd.read_json("./Karolina/StreamingHistory0.json")
     df = df.query("msPlayed>30000")
 
 if data == "Łukasz":
@@ -71,22 +72,23 @@ df["count"] = df.groupby(["hour", "weekday"])["weekday"].transform('count')
 cats = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
 df['weekday'] = pd.Categorical(df['weekday'], categories=cats, ordered=True)
 df = df.sort_values('weekday')
+#print(df.sample(10))
 
 #df.info()
 
 df1 = df[['hour', 'weekday', 'count']]
 #print(df1.head())
 #print(df1.info())
-df2=pd.DataFrame({'hour': [i for i in range(0,24)],
-                  'weekday': ["Monday" for i in range(0,24)],
-                  'count':[0 for i in range(0,24)]})
+df2=pd.DataFrame({'hour': [i%24 for i in range(0,24*7)],
+                  'weekday': [cats[i%7] for i in range(0,24*7)],
+                  'count':[0 for i in range(0,24*7)]})
 df1 = df1.append(df2, ignore_index=True)
 
 x = pd.DataFrame(df1['weekday'].unique())
 heatmap_pt = pd.pivot_table(df1, values='count', index=['hour'], columns='weekday')
 fig, ax = plt.subplots(figsize=(16, 8))
 ax.set(ylim=(0, 24))
-sns.set(rc={'axes.facecolor':"#0a0909", 'figure.facecolor':"#0a0909"})
+sns.set(rc={'axes.facecolor':"#191414", 'figure.facecolor':"#191414"})
 mpl.rcParams.update({'text.color' : "white",
                      'axes.labelcolor' : "white",
                      #'legend.labelcolor': "white",
@@ -98,13 +100,29 @@ mpl.rcParams.update({'text.color' : "white",
 #gyr = ['#28B463','#FBFF00', '#C0392B']
 #my_colors = ListedColormap(sns.color_palette(gyr))     201A1A      2CFF77
 #cmap=sns.cubehelix_palette(start=2, rot=0, dark=0, light=.95, reverse=True, as_cmap=True)
-my_colors = clr.LinearSegmentedColormap.from_list('custom blue', ['#0d0c0c','#0ABD4A','#A2FFC4'], N=256)
+my_colors = clr.LinearSegmentedColormap.from_list('custom blue', ['#241e1d','#0ABD4A','#A2FFC4'], N=256)
 sns.heatmap(heatmap_pt, cmap=my_colors)
 plt.xticks(rotation=15)
+df2=df
+df2["times_played"]=df.groupby(["weekday","trackName"])["trackName"].transform("count")
+df2=df2.sort_values('times_played', ascending=False).drop_duplicates(['weekday'])
+df2['weekday'] = pd.Categorical(df2['weekday'], categories=cats, ordered=True)
+df2=df2[["weekday","trackName","artistName","times_played"]].sort_values('weekday')
 
-
-
+print(df2)
 
 #st.write(a)
 #with col2:
 st.pyplot(fig)
+
+hide_table_row_index = """
+            <style>
+            thead tr th:first-child {display:none}
+            tbody th {display:none}
+            </style>
+            """
+
+# Inject CSS with Markdown
+st.markdown(hide_table_row_index, unsafe_allow_html=True)
+st.write("What song did we listen to the most during this time?")
+st.table(df2)
