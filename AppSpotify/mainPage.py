@@ -64,7 +64,7 @@ for feature in features:
 df1=df1.reset_index(drop = True)
 df2=df1.groupby("artistName").size().reset_index().rename(columns={0: 'Count'}).sort_values("Count", ascending=False).reset_index(drop = True).head(3)
 df2.index = df2.index + 1
-
+df2 = df2.rename(columns={"artistName": "Artist Name"})
 fig = px.line_polar(r=df1.loc[0,["danceability_mean","energy_mean","speechiness_mean","instrumentalness_mean","valence_mean"]], theta=features, line_close=True,color_discrete_sequence =['black']*3)
 
 # wstawić kolor
@@ -73,6 +73,7 @@ fig = px.line_polar(r=df1.loc[0,["danceability_mean","energy_mean","speechiness_
 fig.update_traces(fill='toself',marker_color='black')
 fig.update_layout(polar_bgcolor= '#1db954')
 fig.update_polars(radialaxis_range=[0,1])
+fig.update_traces(opacity=1)
 
 # df2.style.set_properties(**{'background-color': 'black',
 #                            'color': 'green'})
@@ -82,7 +83,7 @@ with st.container():
     with col1:
         st.title('Karolina ')
         st.write("During selected hours Karolina was listening to those artists the most:")
-        st.dataframe(df2["artistName"])
+        st.dataframe(df2["Artist Name"])
 
     with col2:
         st.plotly_chart(fig, height=100)
@@ -106,6 +107,8 @@ for feature in features:
 dfLukasz1=dfLukasz1.reset_index(drop = True)
 dfLukasz2=dfLukasz1.groupby("artistName").size().reset_index().rename(columns={0: 'Count'}).sort_values("Count", ascending=False).reset_index(drop = True).head(3)
 dfLukasz2.index = dfLukasz2.index + 1
+dfLukasz2 = dfLukasz2.rename(columns={"artistName": "Artist Name"})
+
 figLukasz = px.line_polar(r=dfLukasz1.loc[0,["danceability_mean","energy_mean","speechiness_mean","instrumentalness_mean","valence_mean"]], theta=features, line_close=True,color_discrete_sequence =['black']*3)
 
 # wstawić kolor
@@ -118,7 +121,7 @@ with st.container():
     with col1:
         st.title('Łukasz')
         st.write("During selected hours Łukasz was listening to those artists the most:")
-        st.table(dfLukasz2["artistName"])
+        st.table(dfLukasz2["Artist Name"])
     with col2:
         st.plotly_chart(figLukasz,height=100)
 
@@ -140,6 +143,7 @@ for feature in features:
 dfAgata1=dfAgata1.reset_index(drop = True)
 dfAgata2=dfAgata1.groupby("artistName").size().reset_index().rename(columns={0: 'Count'}).sort_values("Count", ascending=False).reset_index(drop = True).head(3)
 dfAgata2.index = dfAgata2.index + 1
+dfAgata2=dfAgata2.rename(columns={"artistName": "Artist Name"})
 
 figAgata = px.line_polar(r=dfAgata1.loc[0,["danceability_mean","energy_mean","speechiness_mean","instrumentalness_mean","valence_mean"]], theta=features, line_close=True,color_discrete_sequence =['black']*3)
 
@@ -153,7 +157,7 @@ with st.container():
     with col1:
         st.title('Agata')
         st.write("During selected hours Agata was listening to those artists the most:")
-        st.table(dfAgata2["artistName"])
+        st.table(dfAgata2["Artist Name"])
 
     with col2:
         st.plotly_chart(figAgata,height=100)
