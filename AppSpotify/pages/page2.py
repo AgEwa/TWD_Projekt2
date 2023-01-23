@@ -42,6 +42,7 @@ for df in frames:
 artist_chosen = st.selectbox("Choose an artist",
                              artists_to_choose)
 
+
 # Choosing data frames to use
 frames = []  # [df1,df2,df3]
 names = []  # ["Łukasz", "Agata", "Karolina"]
@@ -71,7 +72,9 @@ with st.container():
             colors += ["#4dff7d"]
             node_colors += ["#a6ffbe"]
     with col2:
-        option = st.radio("Compare by years or by songs?", ["Years", "Songs"])
+        option = st.radio("Compare by years or by songs?", ["Years", "Songs", "Albums"])
+        if option == "Songs":
+            number = st.number_input("How many end nodes should be visualized?", min_value=1, max_value=100, value=10)
 
 # If dataframes are chosen
 if frames:
@@ -174,7 +177,7 @@ if frames:
                         df_plot_year = df_plot_year.rename(columns={"count": "Times played"}).iloc[:, [2, 0, 1]]
                         st.table(df_plot_year)
 
-    if option == "Songs":
+    elif option == "Songs":
         df_plot_name = None
         df_plot_songs = None
         all_of_artist = 0
@@ -191,7 +194,7 @@ if frames:
             df_filter_by_artist = df_filter_by_artist.groupby(["Artist","Song"]).ts.agg('count').reset_index()\
                 .rename(columns={"ts":"count"})
             df_filter_by_artist = df_filter_by_artist.sort_values(by="count", ascending=False)
-            df_filter_by_artist = df_filter_by_artist.head(10)
+            df_filter_by_artist = df_filter_by_artist.head(number)
             df_filter_by_artist["Name"] = names[i]
             df_plot_songs = pd.concat([df_plot_songs, df_filter_by_artist])
 
@@ -270,3 +273,5 @@ if frames:
                     with col2:
                         df_plot_songs = df_plot_songs.rename(columns={"count": "Times played"}).iloc[:,[3,1,2]]
                         st.table(df_plot_songs)
+    elif option == "Album":
+        pass
