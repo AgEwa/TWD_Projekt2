@@ -61,14 +61,14 @@ agata = st.checkbox("Agata")
 if agata:
     frames += [df2]
     names += ["Agata"]
-    colors += ["#083318"]
-    node_colors += ["#062913"]
+    colors += ["#039029"]
+    node_colors += ["#4fb169"]
 karolina = st.checkbox("Karolina")
 if karolina:
     frames += [df3]
     names += ["Karolina"]
-    colors += ["#10642d"]
-    node_colors += ["#0d5024"]
+    colors += ["#4dff7d"]
+    node_colors += ["#a6ffbe"]
 
 # If dataframes are chosen
 if frames:
@@ -85,6 +85,7 @@ if frames:
         df_filter_by_artist = df_filter_by_artist.groupby("Year").master_metadata_album_artist_name.agg(
             'count').reset_index() \
             .rename(columns={"master_metadata_album_artist_name": "count"})
+        df_filter_by_artist["Name"] = names[i]
         df_plot_year = pd.concat([df_plot_year, df_filter_by_artist])
 
         # Summing tracks
@@ -145,3 +146,24 @@ if frames:
         fig.update_layout(title_text=" Sankey plot for chosen artist ", font_size=18)
 
         st.plotly_chart(fig)
+
+        tables = st.checkbox("Show tables?")
+        if tables:
+            hide_table_row_index = """
+                        <style>
+                        thead tr th:first-child {display:none}
+                        tbody th {display:none}
+                        </style>
+                        """
+
+            # Inject CSS with Markdown
+            st.markdown(hide_table_row_index, unsafe_allow_html=True)
+            with st.container():
+                col1, col2 = st.columns(2)
+                with col1:
+                    df_plot_name = df_plot_name.rename(columns={"count": "Times played"})
+                    st.table(df_plot_name)
+
+                with col2:
+                    df_plot_year = df_plot_year.rename(columns={"count": "Times played"}).iloc[:,[2,0,1]]
+                    st.table(df_plot_year)
