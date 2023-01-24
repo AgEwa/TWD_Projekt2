@@ -7,7 +7,7 @@ import os
 
 # st.set_page_config(layout="wide")
 
-add_logo("./spotify.png", height=300)
+add_logo("/app/twd_projekt2/AppSpotify/spotify.png", height=300)
 
 page_bg_img = """
 <style>
@@ -21,17 +21,17 @@ with st.sidebar:
     st.markdown(page_bg_img, unsafe_allow_html=True)
 
 st.title("How much do we share listening to our favourite artists?")
-files = os.listdir('./Lukasz/long')
+files = os.listdir('/app/twd_projekt2/AppSpotify/Lukasz/long')
 df1 = pd.DataFrame()
 for file in files:
-    temp = pd.read_json('./Lukasz/long/' + file)
+    temp = pd.read_json('/app/twd_projekt2/AppSpotify/Lukasz/long/' + file)
     df1 = pd.concat([df1, temp])
-files = os.listdir('./Agata/extended')
+files = os.listdir('/app/twd_projekt2/AppSpotify/Agata/extended')
 df2 = pd.DataFrame()
 for file in files:
-    temp = pd.read_json('./Agata/extended/' + file)
+    temp = pd.read_json('/app/twd_projekt2/AppSpotify/Agata/extended/' + file)
     df2 = pd.concat([df2, temp])
-df3 = pd.read_json('./Karolina/endsong.json')
+df3 = pd.read_json('/app/twd_projekt2/AppSpotify/Karolina/endsong.json')
 
 # Searching for top artist for everybody
 artists_to_choose = []

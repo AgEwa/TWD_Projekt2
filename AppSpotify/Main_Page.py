@@ -34,7 +34,7 @@ with st.sidebar:
 
 
 # C:/Users/karim/PycharmProjects/TWD_Projekt2/AppSpotify/karolina.csv
-df = pd.read_csv("./karolina.csv", index_col = 0)
+df = pd.read_csv("/app/twd_projekt2/AppSpotify/karolina.csv", index_col = 0)
 df['secPlayed'] = df['msPlayed'] / 1000
 df = df[df.columns[:-1].insert(4, df.columns[-1])]
 df = df[df.secPlayed > 60]
@@ -90,7 +90,7 @@ with st.container():
 
 hoursL = st.slider('Choose time range for the second person', 0, 24, (8,16))
 
-dfLukasz=pd.read_csv('./Lukasz/final.csv', index_col = 0)
+dfLukasz=pd.read_csv('/app/twd_projekt2/AppSpotify/Lukasz/final.csv', index_col = 0)
 dfLukasz['secPlayed'] = dfLukasz['msPlayed'] / 1000
 dfLukasz = dfLukasz[dfLukasz.columns[:-1].insert(4, dfLukasz.columns[-1])]
 dfLukasz = dfLukasz[dfLukasz.secPlayed > 60]
@@ -126,7 +126,7 @@ with st.container():
         st.plotly_chart(figLukasz,height=100)
 
 hoursA = st.slider('Choose time range for the third person', 0, 24, (8,16))
-dfAgata=pd.read_csv('./Agata.csv', index_col = 0)
+dfAgata=pd.read_csv('/app/twd_projekt2/AppSpotify/Agata.csv', index_col = 0)
 dfAgata['secPlayed'] = dfAgata['msPlayed'] / 1000
 dfAgata = dfAgata[dfAgata.columns[:-1].insert(4, dfAgata.columns[-1])]
 dfAgata = dfAgata[dfAgata.secPlayed > 60]

@@ -14,8 +14,8 @@ from streamlit_extras.app_logo import add_logo
 #st.set_page_config(layout="wide")
 
 
-# add_logo("./spotify.png", height=300)
-#
+add_logo("/app/twd_projekt2/AppSpotify/spotify.png", height=300)
+
 page_bg_img = """
 <style>
 [data-testid="stSidebar"]{
@@ -37,19 +37,19 @@ st.write("Who has had a few sleepless nights spent listening to music? ",
 data = st.radio("Which person's data to display?", ["Agata", "Karolina","Łukasz"])
 
 if data == "Agata":
-    df = pd.read_json("./Agata/extended/endsong_0.json")
-    df1 = pd.read_json("./Agata/extended/endsong_1.json")
-    df2 = pd.read_json("./Agata/extended/endsong_2.json")
+    df = pd.read_json("/app/twd_projekt2/AppSpotify/Agata/extended/endsong_0.json")
+    df1 = pd.read_json("/app/twd_projekt2/AppSpotify/Agata/extended/endsong_1.json")
+    df2 = pd.read_json("/app/twd_projekt2/AppSpotify/Agata/extended/endsong_2.json")
     df = df.append(df1, ignore_index=True).append(df2, ignore_index=True).query("ms_played>30000")
 
 if data == "Karolina":
-    df = pd.read_json("./Karolina/endsong.json")
+    df = pd.read_json("/app/twd_projekt2/AppSpotify/Karolina/endsong.json")
     df = df.query("ms_played>30000")
 
 if data == "Łukasz":
-    df = pd.read_json("./Lukasz/long/endsong_0.json")
-    df1 = pd.read_json("./Lukasz/long/endsong_1.json")
-    df2 = pd.read_json("./Lukasz/long/endsong_2.json")
+    df = pd.read_json("/app/twd_projekt2/AppSpotify/Lukasz/long/endsong_0.json")
+    df1 = pd.read_json("/app/twd_projekt2/AppSpotify/Lukasz/long/endsong_1.json")
+    df2 = pd.read_json("/app/twd_projekt2/AppSpotify/Lukasz/long/endsong_2.json")
     df = df.append(df1, ignore_index=True).append(df2, ignore_index=True).query("ms_played>30000")
 
 
