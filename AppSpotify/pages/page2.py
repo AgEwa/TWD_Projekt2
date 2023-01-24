@@ -20,7 +20,7 @@ page_bg_img = """
 with st.sidebar:
     st.markdown(page_bg_img, unsafe_allow_html=True)
 
-st.title("How much do we share listening to our favourite artists??")
+st.title("How much do we share listening to our favourite artists?")
 files = os.listdir('./Lukasz/long')
 df1 = pd.DataFrame()
 for file in files:
