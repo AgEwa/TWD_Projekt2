@@ -27,58 +27,51 @@ with st.sidebar:
     st.markdown(page_bg_img,unsafe_allow_html=True)
 
 
-#col1, col2, col3 = st.columns([1,5,1])
+
 
 #with col2:
 st.title("When and what do we listen to most often?")
-st.write("Who has had a few sleepless nights spent listening to music? What songs did we listen to the most?")
+st.write("Who has had a few sleepless nights spent listening to music? ",
+         "What songs did we listen to the most and how it changed throughout  the years?")
 data = st.radio("Which person's data to display?", ["Agata", "Karolina","Łukasz"])
 
 if data == "Agata":
-    df = pd.read_json("./Agata/StreamingHistory0.json")
-    df1 = pd.read_json("./Agata/StreamingHistory1.json")
-    df = df.append(df1, ignore_index=True).query("msPlayed>30000")
+    df = pd.read_json("./Agata/extended/endsong_0.json")
+    df1 = pd.read_json("./Agata/extended/endsong_1.json")
+    df2 = pd.read_json("./Agata/extended/endsong_2.json")
+    df = df.append(df1, ignore_index=True).append(df2, ignore_index=True).query("ms_played>30000")
 
 if data == "Karolina":
-    df = pd.read_json("./Karolina/StreamingHistory0.json")
-    df = df.query("msPlayed>30000")
+    df = pd.read_json("./Karolina/endsong.json")
+    df = df.query("ms_played>30000")
 
 if data == "Łukasz":
-    df = pd.read_json("./Lukasz/short/StreamingHistory0.json")
-    df1 = pd.read_json("./Lukasz/short/StreamingHistory1.json")
-    df2 = pd.read_json("./Lukasz/short/StreamingHistory2.json")
-    df = df.append(df1, ignore_index=True).append(df2, ignore_index=True).query("msPlayed>30000")
+    df = pd.read_json("./Lukasz/long/endsong_0.json")
+    df1 = pd.read_json("./Lukasz/long/endsong_1.json")
+    df2 = pd.read_json("./Lukasz/long/endsong_2.json")
+    df = df.append(df1, ignore_index=True).append(df2, ignore_index=True).query("ms_played>30000")
 
-#df = pd.read_json("./" + data + "/StreamingHistory0.json")
-#try:
-#    df1 = pd.read_json("./" + data + "/StreamingHistory1.json")
-#except FileNotFoundError as e:
-#    df1 = []
 
-#df = df.append(df1, ignore_index=True).query("msPlayed>30000")
-df["endTime"] = pd.to_datetime(df["endTime"])
-#df = df.loc[(df['endTime']>=start) & (df['endTime']<=end)]
+df["ts"] = pd.to_datetime(df["ts"])
 
-#with col2:
-start = st.date_input("Enter the start date",min_value=df["endTime"].min(),
-                      max_value=df["endTime"].max(), value=df["endTime"].min())
-end = st.date_input("Enter the end date",min_value=df["endTime"].min(),
-                      max_value=df["endTime"].max(), value=df["endTime"].max())
 
-df= df.loc[(df["endTime"].dt.date>start) &(df["endTime"].dt.date<end)]
-df["weekday"] = df["endTime"].dt.day_name()
-df["hour"] = df["endTime"].dt.hour
+start = st.date_input("Enter the start date",min_value=df["ts"].min(),
+                      max_value=df["ts"].max(), value=df["ts"].min())
+end = st.date_input("Enter the end date",min_value=df["ts"].min(),
+                      max_value=df["ts"].max(), value=df["ts"].max())
+
+df= df.loc[(df["ts"].dt.date>start) &(df["ts"].dt.date<end)]
+df["weekday"] = df["ts"].dt.day_name()
+df["hour"] = df["ts"].dt.hour
 df["count"] = df.groupby(["hour", "weekday"])["weekday"].transform('count')
 cats = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
 df['weekday'] = pd.Categorical(df['weekday'], categories=cats, ordered=True)
 df = df.sort_values('weekday')
-#print(df.sample(10))
 
-#df.info()
 
 df1 = df[['hour', 'weekday', 'count']]
-#print(df1.head())
-#print(df1.info())
+
+
 df2=pd.DataFrame({'hour': [i%24 for i in range(0,24*7)],
                   'weekday': [cats[i%7] for i in range(0,24*7)],
                   'count':[0 for i in range(0,24*7)]})
@@ -97,22 +90,16 @@ mpl.rcParams.update({'text.color' : "white",
                      'xtick.color':"white",
                      'ytick.color':"white"})
 
-#gyr = ['#28B463','#FBFF00', '#C0392B']
-#my_colors = ListedColormap(sns.color_palette(gyr))     201A1A      2CFF77
-#cmap=sns.cubehelix_palette(start=2, rot=0, dark=0, light=.95, reverse=True, as_cmap=True)
 my_colors = clr.LinearSegmentedColormap.from_list('custom blue', ['#241e1d','#0ABD4A','#A2FFC4'], N=256)
 sns.heatmap(heatmap_pt, cmap=my_colors)
 plt.xticks(rotation=15)
 df2=df
-df2["times_played"]=df.groupby(["weekday","trackName"])["trackName"].transform("count")
+df2["times_played"]=df.groupby(["weekday","master_metadata_track_name"])["master_metadata_track_name"].transform("count")
 df2=df2.sort_values('times_played', ascending=False).drop_duplicates(['weekday'])
 df2['weekday'] = pd.Categorical(df2['weekday'], categories=cats, ordered=True)
-df2=df2[["weekday","trackName","artistName","times_played"]].sort_values('weekday')
+df2=df2[["weekday","master_metadata_track_name","master_metadata_album_artist_name","times_played"]].sort_values('weekday')
 
-print(df2)
 
-#st.write(a)
-#with col2:
 st.pyplot(fig)
 
 hide_table_row_index = """
@@ -124,5 +111,8 @@ hide_table_row_index = """
 
 # Inject CSS with Markdown
 st.markdown(hide_table_row_index, unsafe_allow_html=True)
-st.write("What song did we listen to the most during this time?")
+st.write("Most listened songs per weekday:")
+df2=df2.rename(columns={'weekday':'Weekday','master_metadata_track_name':'Track name',
+                        'master_metadata_album_artist_name':'Artist Name','times_played':'Times played'})
 st.table(df2)
+
