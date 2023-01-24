@@ -114,5 +114,7 @@ st.markdown(hide_table_row_index, unsafe_allow_html=True)
 st.write("Most listened songs per weekday:")
 df2=df2.rename(columns={'weekday':'Weekday','master_metadata_track_name':'Track name',
                         'master_metadata_album_artist_name':'Artist Name','times_played':'Times played'})
+
+df2 = df2.astype({'Times played':'int'})
 st.table(df2)
 
