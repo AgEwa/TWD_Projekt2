@@ -13,7 +13,7 @@ from streamlit_extras.app_logo import add_logo
 
 #st.set_page_config(layout="wide")
 
-add_logo("./spotify.png", height=300)
+add_logo("spotify.png", height=300)
 
 page_bg_img = """
 <style>
