@@ -41,7 +41,7 @@ df = df[df.secPlayed > 60]
 features = ['danceability', 'energy', 'speechiness', 'instrumentalness', 'valence']
 
 
-st.title("What music do we listen to?")
+st.title("What music do we listen to throughout the day?")
 # # st.sidebar.success("Select page above.")
 #
 st.write("Check who are the artist we most frequently listen to. Maybe you know a few?")
