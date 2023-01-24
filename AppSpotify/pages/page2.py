@@ -34,11 +34,28 @@ for file in files:
 df3 = pd.read_json('./Karolina/endsong.json')
 
 # Searching for top artist for everybody
-frames = [df1, df2, df3]
 artists_to_choose = []
-for df in frames:
-    temp = df.master_metadata_album_artist_name.value_counts().head(10).reset_index()
-    artists_to_choose += temp["index"].tolist()
+
+
+option = st.radio("Which artists?",
+         ["Mututal","Top"])
+
+if option == "Mututal":
+    found_artists = ['ABBA', 'Alice Merton', 'Antonio Vivaldi', 'Arctic Monkeys', 'Bastille', 'Billie Eilish', 'Birdy',
+                     'Bon Iver', 'Calvin Harris', 'Camila Cabello', 'Conan Gray', 'Daughter', 'Ed Sheeran', 'Eminem',
+                     'Fall Out Boy', 'Flovry', 'Green Day', 'Imagine Dragons', 'Jinsang', 'Jon Bellion',
+                     'Justin Timberlake', 'Krzysztof Zalewski', 'Kupla', 'Labrinth', 'Lord Huron', 'Lorde',
+                     'Michael Jackson', 'Milky Chance', 'Måneskin', 'Of Monsters and Men', 'Olivia Rodrigo',
+                     'OneRepublic', 'Passenger', 'Radical Face', 'Sam Smith', 'Stromae', 'Taylor Swift', 'The Beatles',
+                     'The Cranberries', 'The Dumplings', 'The Lumineers', 'The Neighbourhood', 'Twenty One Pilots',
+                     'Vance Joy', 'X Ambassadors', "j'san", 'sanah', 'Adele', 'Shawn Mendes']
+    artists_to_choose = found_artists
+elif option == "Top":
+    frames = [df1, df2, df3]
+    for df in frames:
+        temp = df.master_metadata_album_artist_name.value_counts().head(10).reset_index()
+        artists_to_choose += temp["index"].tolist()
+
 artist_chosen = st.selectbox("Choose an artist",
                              artists_to_choose)
 
@@ -72,10 +89,15 @@ with st.container():
             colors += ["#4dff7d"]
             node_colors += ["#a6ffbe"]
     with col2:
-        option = st.radio("Compare by years or by songs?", ["Years", "Songs", "Albums"])
+        option = st.radio("Compare by what?", ["Years", "Songs", "Albums"])
         if option == "Songs":
-            number = st.number_input("How many end nodes should be visualized?", min_value=1, max_value=100, value=10)
+            number = st.number_input("How many end nodes should be visualized for each person?", min_value=1,
+                                     max_value=100, value=10)
+        elif option == "Albums":
+            number = st.number_input("How many end nodes should be visualized for each person?", min_value=1,
+                                     max_value=100, value=3)
 
+df_wsp = None
 # If dataframes are chosen
 if frames:
     if option == "Years":
@@ -85,6 +107,9 @@ if frames:
         year_len = []
         i = 0
         for df in frames:
+            temp = df
+            temp["Name"] = names[i]
+            df_wsp = pd.concat([df_wsp, temp])
             # Filtering for chosen artist by year
             df_filter_by_artist = df.loc[
                 df.master_metadata_album_artist_name == artist_chosen].reset_index(drop=True)
@@ -152,11 +177,12 @@ if frames:
                     color=color
                 )
             )])
-            fig.update_layout(title_text=" Sankey plot for chosen artist ", font_size=18)
+            fig.update_layout(title_text=" Breakdown by years ", font_size=18)
 
             st.plotly_chart(fig)
 
             tables = st.checkbox("Show tables?")
+
             if tables:
                 hide_table_row_index = """
                             <style>
@@ -189,10 +215,10 @@ if frames:
                 df.master_metadata_album_artist_name == artist_chosen].reset_index(drop=True)
 
             # Counting times played by years
-            df_filter_by_artist = df_filter_by_artist.rename(columns={"master_metadata_album_artist_name":"Artist",
-                                                "master_metadata_track_name":"Song"})
-            df_filter_by_artist = df_filter_by_artist.groupby(["Artist","Song"]).ts.agg('count').reset_index()\
-                .rename(columns={"ts":"count"})
+            df_filter_by_artist = df_filter_by_artist.rename(columns={"master_metadata_album_artist_name": "Artist",
+                                                                      "master_metadata_track_name": "Song"})
+            df_filter_by_artist = df_filter_by_artist.groupby(["Artist", "Song"]).ts.agg('count').reset_index() \
+                .rename(columns={"ts": "count"})
             df_filter_by_artist = df_filter_by_artist.sort_values(by="count", ascending=False)
             df_filter_by_artist = df_filter_by_artist.head(number)
             df_filter_by_artist["Name"] = names[i]
@@ -249,7 +275,7 @@ if frames:
                     color=color
                 )
             )])
-            fig.update_layout(title_text=" Sankey plot for chosen artist ", font_size=18)
+            fig.update_layout(title_text=" Top songs ", font_size=18)
 
             st.plotly_chart(fig)
 
@@ -271,7 +297,115 @@ if frames:
                         st.table(df_plot_name)
 
                     with col2:
-                        df_plot_songs = df_plot_songs.rename(columns={"count": "Times played"}).iloc[:,[3,1,2]]
+                        df_plot_songs = df_plot_songs.rename(columns={"count": "Times played"}).iloc[:, [3, 1, 2]]
                         st.table(df_plot_songs)
-    elif option == "Album":
-        pass
+    elif option == "Albums":
+        df_plot_name = None
+        df_plot_albums = None
+        all_of_artist = 0
+        albums_len = []
+        i = 0
+        for df in frames:
+            # Filtering for chosen artist by year
+            df_filter_by_artist = df.loc[
+                df.master_metadata_album_artist_name == artist_chosen].reset_index(drop=True)
+            # Counting times played by years
+            df_filter_by_artist = df_filter_by_artist.rename(columns={"master_metadata_album_artist_name": "Artist",
+                                                                      "master_metadata_album_album_name": "Album"})
+            df_filter_by_artist = df_filter_by_artist.groupby(["Artist", "Album"]).ts.agg('count').reset_index() \
+                .rename(columns={"ts": "count"})
+            df_filter_by_artist = df_filter_by_artist.sort_values(by="count", ascending=False)
+            df_filter_by_artist = df_filter_by_artist.head(number)
+            df_filter_by_artist["Name"] = names[i]
+            df_plot_albums = pd.concat([df_plot_albums, df_filter_by_artist])
+
+            albums_len.append(len(df_filter_by_artist))
+
+            # Summing tracks
+            addition = sum(df_filter_by_artist['count'])
+            all_of_artist += addition
+
+            # Times played for every person
+            df_plot_name = pd.concat([df_plot_name, pd.DataFrame({
+                'Name': [names[i]],
+                'count': [addition]
+            })])
+            i += 1
+
+        # print(df_plot_albums)
+        if not df_plot_albums.empty:
+            albums = pd.unique(df_plot_albums["Album"]).tolist()
+            # Data for Sankey diagram
+            label = ['Sum of all tracks'] + df_plot_name['Name'].tolist() + albums
+            source = []
+            target = []
+            value = []
+            color = []
+            for i in range(len(df_plot_name)):
+                source += [0]
+                target += [i + 1]
+                color += [colors[i]]
+            value += df_plot_name['count'].tolist()
+
+            chosen_album = 0
+            for i in range(len(df_plot_name)):
+                for j in range(albums_len[i]):
+                    source += [1 + i]
+                    target += [label.index(df_plot_albums.loc[:, 'Album'].iloc[chosen_album + j])]
+                    color += [colors[i]]
+                chosen_album += albums_len[i]
+            value += df_plot_albums['count'].tolist()
+
+            fig = go.Figure(data=[go.Sankey(
+                node=dict(
+                    label=label,
+                    color=node_colors + px.colors.qualitative.Light24
+                    # x = node_x,
+                    # y = node_y,
+
+                ),
+                link=dict(
+                    source=source,
+                    target=target,
+                    value=value,
+                    color=color
+                )
+            )])
+            fig.update_layout(title_text=" Top albums ", font_size=18)
+
+            st.plotly_chart(fig)
+
+            tables = st.checkbox("Show tables?")
+            if tables:
+                hide_table_row_index = """
+                                            <style>
+                                            thead tr th:first-child {display:none}
+                                            tbody th {display:none}
+                                            </style>
+                                            """
+
+                # Inject CSS with Markdown
+                st.markdown(hide_table_row_index, unsafe_allow_html=True)
+                with st.container():
+                    col1, col2 = st.columns(2)
+                    with col1:
+                        df_plot_name = df_plot_name.rename(columns={"count": "Times played"})
+                        st.table(df_plot_name)
+
+                    with col2:
+                        df_plot_songs = df_plot_albums.rename(columns={"count": "Times played"}).iloc[:, [3, 1, 2]]
+                        st.table(df_plot_songs)
+
+# serching for mutual artists
+# df_wsp = df_wsp.groupby(["Name", "master_metadata_album_artist_name"]).ts.agg("count").reset_index()
+# temp = df_wsp[df_wsp.ts>10]
+#
+# df_artists_sum = temp.groupby("master_metadata_album_artist_name").ts.agg("sum").reset_index().rename(columns={"ts":"sum"})
+#
+# df_wsp = temp.merge(df_artists_sum,on="master_metadata_album_artist_name")
+# df_wsp["wsp"] = df_wsp["ts"]/df_wsp["sum"]
+# lista = pd.unique(df_wsp[(df_wsp["wsp"] != 1) & (df_wsp["wsp"] > 0.15)].loc[:,"master_metadata_album_artist_name"])
+#
+# result = "\',\'".join(lista)
+# print(result)
+
