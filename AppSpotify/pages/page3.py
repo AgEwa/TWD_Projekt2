@@ -65,8 +65,6 @@ df["weekday"] = df["ts"].dt.day_name()
 df["hour"] = df["ts"].dt.hour
 df["count"] = df.groupby(["hour", "weekday"])["weekday"].transform('count')
 cats = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
-df['weekday'] = pd.Categorical(df['weekday'], categories=cats, ordered=True)
-df = df.sort_values('weekday')
 
 
 df1 = df[['hour', 'weekday', 'count']]
@@ -76,6 +74,9 @@ df2=pd.DataFrame({'hour': [i%24 for i in range(0,24*7)],
                   'weekday': [cats[i%7] for i in range(0,24*7)],
                   'count':[0 for i in range(0,24*7)]})
 df1 = df1.append(df2, ignore_index=True)
+
+df1['weekday'] = pd.Categorical(df1['weekday'], categories=cats, ordered=True)
+df1 = df1.sort_values('weekday')
 
 x = pd.DataFrame(df1['weekday'].unique())
 heatmap_pt = pd.pivot_table(df1, values='count', index=['hour'], columns='weekday')
