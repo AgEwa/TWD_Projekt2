@@ -7,7 +7,7 @@ from streamlit_extras.app_logo import add_logo
 
 
 
-add_logo("spotify.png", height=300)
+add_logo("/app/twd_projekt2/AppSpotify/spotify.png", height=300)
 
 page_bg_img = """
 <style>
