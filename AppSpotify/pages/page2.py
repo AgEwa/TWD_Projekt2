@@ -38,9 +38,9 @@ artists_to_choose = []
 
 
 option = st.radio("Which artists?",
-         ["Mututal","Top"])
+         ["Mutual","Top"])
 
-if option == "Mututal":
+if option == "Mutual":
     found_artists = ['ABBA', 'Alice Merton', 'Antonio Vivaldi', 'Arctic Monkeys', 'Bastille', 'Billie Eilish', 'Birdy',
                      'Bon Iver', 'Calvin Harris', 'Camila Cabello', 'Conan Gray', 'Daughter', 'Ed Sheeran', 'Eminem',
                      'Fall Out Boy', 'Flovry', 'Green Day', 'Imagine Dragons', 'Jinsang', 'Jon Bellion',
